@@ -45,14 +45,14 @@ def ipv4(address):
         try:
             socket.inet_aton(address)
         except socket.error:
-            raise OptionValidationError("Option have to be valid IP address.")
+            raise OptionValidationError("Option has to be valid IP address.")
 
         if address.count('.') == 3:
             return address
         else:
-            raise OptionValidationError("Option have to be valid IP address.")
+            raise OptionValidationError("Option has to be valid IP address.")
     except socket.error:
-        raise OptionValidationError("Option have to be valid IP address.")
+        raise OptionValidationError("Option has to be valid IP address.")
 
     return address
 
